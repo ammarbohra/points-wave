@@ -1,16 +1,3 @@
-//NAVBAR TRANSPARENCY
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  if (scroll >= 10) {
-    $(".navbar").removeClass("transparent");
-  }
-  if (scroll < 10) {
-    $(".navbar").addClass("transparent");
-}
-});
-//navbar transparency
-
-
 //TEXT CAROUSEL
 var translate, rotate, rotateback, cameraRotate, cameraRotateback, lookUp, lookDown, active;
 
