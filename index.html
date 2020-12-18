@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from the4fox.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Dec 2020 15:33:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4FOX | Complete Digital Solutions</title>
+    <link href="../cdn.jsdelivr.net/npm/remixicon%402.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+  </head>
+  <body class="home">
+
+    
+  <script src="../code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark transparent">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="approach.html">Approach</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="works.html">Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+      </nav>
+      <script type="text/javascript">
+      const currentLocation = location.href;
+      const navItem = document.querySelectorAll(".nav-item");
+      const navLink = document.querySelectorAll(".nav-link");
+      const navLength = navLink.length;
+      for(let i = 0; i < navLength; i++) {
+        if(navLink[i].href === currentLocation) {
+          navItem[i].classList.add("active");
+        }
+      }
+      $(window).scroll(function() {    
+
+
+
+        var scroll = $(window).scrollTop();
+      
+        if (scroll >= 10) {
+            $(".navbar").removeClass("transparent");
+        }
+        if (scroll < 10) {
+          $(".navbar").addClass("transparent");
+      }
+      });
+    </script>
+  
+
+    <script src="../code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/popper.js%401.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="../stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script>
+        var translate, rotate, rotateback, cameraRotate, cameraRotateback, lookUp, lookDown, active;
+
+        function next() {
+        var currentImg = $('.text.active');
+        var nextImg = currentImg.next();
+        if(currentImg.hasClass('text1')) {rotate = true;translate = true}
+        else if(currentImg.hasClass('text3')) {cameraRotate = true;translate = false}
+        else if(currentImg.hasClass('text5')) {rotateback = true}
+        else if(currentImg.hasClass('text6')) {lookDown = true;$('.dots-container').addClass('visible')}
+        else if (currentImg.hasClass('text12')) {$('.dots-container').removeClass('visible')}
+        if(nextImg.length) {
+            currentImg.removeClass('active').css('z-index', -10);
+            nextImg.addClass('active').css('z-index', 10);
+        }
+        }
+
+        function prev() {
+        var currentImg = $('.text.active');
+        var prevImg = currentImg.prev();
+        if(currentImg.hasClass('text2')) {rotateback = true;translate = false;}
+        else if(currentImg.hasClass('text4')) {cameraRotateback = true;translate = true}
+        else if(currentImg.hasClass('text6')) {rotate = true}
+        else if(currentImg.hasClass('text7')) {lookUp = true;$('.dots-container').removeClass('visible')}
+        else if (currentImg.hasClass('text13')) {$('.dots-container').addClass('visible')}
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index', -10);
+            prevImg.addClass('active').css('z-index', 10);
+        }
+        }
+
+        $(document).ready(function(){
+        var position = 0;
+        var recentScroll = false;
+        $('.next').on('click', function(){
+            next();
+        });
+        $('.prev').on('click', function(){
+            prev();
+        });
+        $(window).on("mousewheel", function(e) {
+            var scroll = $(window).scrollTop();
+            if(!recentScroll && e.deltaY < 0) {
+            console.log('scrollDown');
+            next();
+            recentScroll = true;
+            window.setTimeout(() => { recentScroll = false; }, 1500)
+            }
+
+            else if(!recentScroll && e.deltaY > 0) {
+            console.log('scrollUp');
+            prev();
+            recentScroll = true;
+            window.setTimeout(() => { recentScroll = false; }, 1500)
+            }
+        position = scroll;
+        }
+        );
+        })
+    </script>
+    
+    <script src="js/three.js"></script>
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+        attribute float scale;
+
+        void main() {
+
+            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+            gl_PointSize = scale * ( 300.0 / - mvPosition.z );
+
+            gl_Position = projectionMatrix * mvPosition;
+
+        }
+
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+        uniform vec3 color;
+
+        void main() {
+
+            if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
+
+            gl_FragColor = vec4( color, 1.0 );
+
+        }
+
+    </script> 
+    <script>
+
+        var SEPARATION = 100, AMOUNTX = 80, AMOUNTY = 80;
+        var container;
+        var camera, scene, renderer;
+        var particles, count = 0;
+        var mouseX = 0, mouseY = 0;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+        init();
+        animate();
+
+        function init() {
+
+            container = document.createElement( 'div' );
+            document.body.appendChild( container );
+
+            camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 4000 );
+            camera.position.z = 2500;
+            camera.position.y = 250;
+            // camera.rotation.x = Math.PI/12;
+
+
+            scene = new THREE.Scene();
+
+            scene.rotation.y = Math.PI/4;
+
+
+
+            //
+
+            var numParticles = AMOUNTX * AMOUNTY;
+
+            var positions = new Float32Array( numParticles * 3 );
+            var scales = new Float32Array( numParticles );
+
+            var i = 0, j = 0;
+
+            for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+                for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+                    positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+                    positions[ i + 1 ] = 0; // y
+                    positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+                    scales[ j ] = 1;
+
+                    i += 3;
+                    j ++;
+
+                }
+
+            }
+
+            var geometry = new THREE.BufferGeometry();
+            geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+            geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+            var material = new THREE.ShaderMaterial( {
+
+                uniforms: {
+                    color: { value: new THREE.Color( 0xffffff ) },
+                },
+                vertexShader: document.getElementById( 'vertexshader' ).textContent,
+                fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+            } );
+
+            //
+
+            particles = new THREE.Points( geometry, material );
+            scene.add( particles );
+
+            //
+
+            renderer = new THREE.WebGLRenderer( { alpha: true } );
+            renderer.setClearColor( 0x000000, 0 );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+            window.addEventListener( 'resize', onWindowResize, false );
+
+        }
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+
+        //
+
+        function animate() {
+
+            requestAnimationFrame( animate );
+
+            render();
+        }
+
+        function render() {
+
+            if(rotate) {
+                scene.rotation.y = scene.rotation.y - (Math.PI/180)*1.5;
+                if(scene.rotation.y <= 0) {rotate = false;}
+            }
+            if (translate) {
+                scene.position.z = scene.position.z + 10;
+                if(scene.position.z >= 2500) {scene.position.z = 0;}
+            }
+            if(rotateback) {
+                scene.rotation.y = scene.rotation.y + (Math.PI/180)*1.5;
+                if(scene.rotation.y >= Math.PI/4) {rotateback = false;}
+            }
+            if(cameraRotate) {
+                camera.rotation.z = camera.rotation.z - (Math.PI/180)*4;
+                if(camera.rotation.z <= -Math.PI) {cameraRotate = false;}
+            }
+            if(cameraRotateback) {
+                camera.rotation.z = camera.rotation.z + (Math.PI/180)*4;
+                if(camera.rotation.z >= 0) {cameraRotateback = false;}
+            }
+            if(lookDown) {
+                camera.rotation.x = camera.rotation.x + (Math.PI/180)*2;
+                if(camera.rotation.x >= Math.PI/2) {lookDown = false}
+            }
+            if(lookUp) {
+                camera.rotation.x = camera.rotation.x - (Math.PI/180)*2;
+                if(camera.rotation.x <= 0) {lookUp = false}
+            }
+
+            var positions = particles.geometry.attributes.position.array;
+            var scales = particles.geometry.attributes.scale.array;
+
+            var i = 0, j = 0;
+
+            for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+                for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+                    positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+                                    ( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+                    scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 8 +
+                                    ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 8;
+
+                    i += 3;
+                    j ++;
+
+                }
+
+            }
+
+            particles.geometry.attributes.position.needsUpdate = true;
+            particles.geometry.attributes.scale.needsUpdate = true;
+
+            renderer.render( scene, camera );
+
+            count += 0.1;
+
+        }
+    </script>
+
+    <div class="slider-outer">
+        
+        <div class="slider-inner">
+
+
+            <h1 class="text text1 active animate__animated animate__slideInLeft">4FOX is a highly <br>rated <b>Digital Marketing<br>Agency.</b> </h1>
+            <h2 class="text text2 animate__animated animate__slideInRight">Get your Website <br>Audit done. <br><a href="contact.html">Here</a></h2>
+            <h2 class="text text3 animate__animated animate__slideInLeft">Book a Free 1-1<br>Consultancy Call <br><a href="tel:+919351784786"><i class="ri-phone-line"></i></a></h2>
+            <h2 class="text text4 animate__animated animate__fadeIn">Lets get started with <br><span>4FOX <br>Complete Digital Solutions</span></h2>
+            <h2 class="text text5 animate__animated animate__slideInLeft">4Fox brings new <b>ideas </b><br>new <b>perspective.</b></h2>
+            <h2 class="text text6 animate__animated animate__slideInRight">Introduce new <span>ways</span> of doing things.</h2>
+            <h2 class="text text7 animate__animated animate__slideInLeft">Allow us to surve you and connect the dots on your <span>digital strategy.</span></h2>
+            <h2 class="text text8 animate__animated animate__slideInRight">Our experts can elevate your</h2>
+            <h2 class="text text9 animate__animated animate__fadeIn" style="color: darkmagenta;">STRATEGY</h2>
+            <h2 class="text text10 animate__animated animate__fadeIn" style="color: cyan;">CREATIVITY</h2>
+            <h2 class="text text11 animate__animated animate__fadeIn" style="color: yellow;">MARKETING</h2>
+            <h2 class="text text12 animate__animated animate__fadeIn" style="color: green;">DEVELOPMENT</h2>
+            <div class="text text13 animate__animated animate__fadeIn"><div><h2 class="text-center">See Our</h2></div><div><a href="approach.html">Approach</a></div></div>
+        </div>
+
+        <button class="prev"><i class="ri-arrow-drop-up-line"></i></button>
+        <button class="next"><i class="ri-arrow-drop-right-line"></i></button>
+    </div>
+
+    <div class="dots-container">
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot" style="background-color: darkmagenta;"></span>
+            <span class="dot" style="background-color: cyan;"></span>
+            <span class="dot" style="background-color: yellow;"></span>
+            <span class="dot" style="background-color: green;"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+  </body>
+
+<!-- Mirrored from the4fox.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Dec 2020 15:33:57 GMT -->
+</html>
