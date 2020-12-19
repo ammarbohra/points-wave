@@ -16,9 +16,6 @@ a.disabled {
 }
 
 /*NAV*/
-.transparent {
-  background: none!important;
-}
 .navbar-brand {
   font-size: 2rem;
   font-weight: 600;
